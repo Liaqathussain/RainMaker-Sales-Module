@@ -1,0 +1,728 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="4.0" DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProductVersion>
+    </ProductVersion>
+    <SchemaVersion>2.0</SchemaVersion>
+    <ProjectGuid>{426A230D-034D-423D-8F71-F598B199D4D7}</ProjectGuid>
+    <ProjectTypeGuids>{349c5851-65df-11da-9384-00065b846f21};{fae04ec0-301f-11d3-bf4b-00c04f79efbc}</ProjectTypeGuids>
+    <OutputType>Library</OutputType>
+    <AppDesignerFolder>Properties</AppDesignerFolder>
+    <RootNamespace>RainMaker</RootNamespace>
+    <AssemblyName>RainMaker</AssemblyName>
+    <TargetFrameworkVersion>v4.0</TargetFrameworkVersion>
+    <UseIISExpress>false</UseIISExpress>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="CrystalDecisions.CrystalReports.Design, Version=13.0.2000.0, Culture=neutral, PublicKeyToken=692fbea5521e1304, processorArchitecture=MSIL" />
+    <Reference Include="CrystalDecisions.CrystalReports.Engine, Version=13.0.2000.0, Culture=neutral, PublicKeyToken=692fbea5521e1304, processorArchitecture=MSIL" />
+    <Reference Include="CrystalDecisions.ReportSource, Version=13.0.2000.0, Culture=neutral, PublicKeyToken=692fbea5521e1304, processorArchitecture=MSIL" />
+    <Reference Include="CrystalDecisions.Shared, Version=13.0.2000.0, Culture=neutral, PublicKeyToken=692fbea5521e1304, processorArchitecture=MSIL" />
+    <Reference Include="CrystalDecisions.Web, Version=13.0.2000.0, Culture=neutral, PublicKeyToken=692fbea5521e1304, processorArchitecture=MSIL" />
+    <Reference Include="Microsoft.CSharp" />
+    <Reference Include="System.Runtime.Serialization" />
+    <Reference Include="System.ServiceModel" />
+    <Reference Include="System.Web.DynamicData" />
+    <Reference Include="System.Web.Entity" />
+    <Reference Include="System.Web.ApplicationServices" />
+    <Reference Include="System" />
+    <Reference Include="System.Data" />
+    <Reference Include="System.Core" />
+    <Reference Include="System.Data.DataSetExtensions" />
+    <Reference Include="System.Web.Extensions" />
+    <Reference Include="System.Xml.Linq" />
+    <Reference Include="System.Drawing" />
+    <Reference Include="System.Web" />
+    <Reference Include="System.Xml" />
+    <Reference Include="System.Configuration" />
+    <Reference Include="System.Web.Services" />
+    <Reference Include="System.EnterpriseServices" />
+    <Reference Include="Telerik.Web.UI, Version=2010.3.1109.40, Culture=neutral, PublicKeyToken=121fae78165ba3d4, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+    </Reference>
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="BSS Administration\CreateAccount.aspx" />
+    <Content Include="BSS\CustomerOrder.aspx" />
+    <Content Include="Classes\utilities.vb" />
+    <Content Include="ComplainManager.aspx" />
+    <Content Include="Dashboard\ComplainAnalysis.aspx" />
+    <Content Include="Dashboard\CustomerAnalysis.aspx" />
+    <Content Include="Dashboard\SmartSearch.aspx" />
+    <Content Include="Default.aspx" />
+    <Content Include="NRF\MapNRFWithOpportunity.aspx" />
+    <Content Include="NRF\NRFWithOpportunity.aspx" />
+    <Content Include="NRF\TAFApproval.aspx" />
+    <Content Include="NRF\TAFCreation.aspx" />
+    <Content Include="NRF\TAFSearch.aspx" />
+    <Content Include="NRF\TAFSearchData.aspx" />
+    <Content Include="NRF\TestingISL.aspx" />
+    <Content Include="NRF\TestingPageCurrentLocation.aspx" />
+    <Content Include="Sales\CreateCustContact.aspx" />
+    <Content Include="Sales\CreateOpportunityEBU.aspx" />
+    <Content Include="frmLogin.aspx" />
+    <Content Include="IBU\CreateOpportunityIBU.aspx" />
+    <Content Include="IBU\OpportunityList.aspx" />
+    <Content Include="IBU\UpdateOpportunityIBU.aspx" />
+    <Content Include="Images\1.png" />
+    <Content Include="Images\2.png" />
+    <Content Include="Images\3.png" />
+    <Content Include="Images\4.png" />
+    <Content Include="Images\5.png" />
+    <Content Include="Images\SaveIcon.png" />
+    <Content Include="NRF\InfraCosting.aspx" />
+    <Content Include="NRF\LoadControlData.asmx" />
+    <Content Include="NRF\Lookup.aspx" />
+    <Content Include="NRF\Manual.aspx" />
+    <Content Include="NRF\MapNRFCustomerCoordinates.aspx" />
+    <Content Include="NRF\NRFDetailView.aspx" />
+    <Content Include="NRF\NRFItemsView.aspx" />
+    <Content Include="OMTeamEscalation.aspx" />
+    <Content Include="Sales\Activity.aspx" />
+    <Content Include="Sales\CreateUser.aspx" />
+    <Content Include="Sales\OpportunityListEBU.aspx" />
+    <Content Include="Sales\Quota.aspx" />
+    <Content Include="Sales\UpdateOpportunityEBU.aspx" />
+    <Content Include="Scripts\js\canvasjs.min.js" />
+    <Content Include="SearchCircuits.aspx" />
+    <Content Include="NRF\MapCoordinates.aspx" />
+    <Content Include="NRF\MapNRF.aspx" />
+    <Content Include="NRF\NRFView.aspx" />
+    <Content Include="Scripts\jquery-1.4.1-vsdoc.js" />
+    <Content Include="Scripts\jquery-1.4.1.js" />
+    <Content Include="Scripts\jquery-1.4.1.min.js" />
+    <Content Include="Scripts\js\bootstrap.js" />
+    <Content Include="Scripts\js\bootstrap.min.js" />
+    <Content Include="Scripts\js\index.js" />
+    <Content Include="Scripts\js\jquery.js" />
+    <Content Include="Scripts\js\plugins\flot\excanvas.min.js" />
+    <Content Include="Scripts\js\plugins\flot\flot-data.js" />
+    <Content Include="Scripts\js\plugins\flot\jquery.flot.js" />
+    <Content Include="Scripts\js\plugins\flot\jquery.flot.pie.js" />
+    <Content Include="Scripts\js\plugins\flot\jquery.flot.resize.js" />
+    <Content Include="Scripts\js\plugins\flot\jquery.flot.tooltip.min.js" />
+    <Content Include="Scripts\js\plugins\morris\morris-data.js" />
+    <Content Include="Scripts\js\plugins\morris\morris.js" />
+    <Content Include="Scripts\js\plugins\morris\morris.min.js" />
+    <Content Include="Scripts\js\plugins\morris\raphael.min.js" />
+    <Content Include="ComplainForm.aspx" />
+    <Content Include="MultipleComplainForm.aspx" />
+    <Content Include="ComplainMisc.aspx" />
+    <Content Include="Dashboard\Web.config" />
+    <Content Include="Sales\AddCustomer.aspx" />
+    <None Include="Properties\DataSources\System.Data.DataSet.datasource" />
+    <None Include="Properties\DataSources\System.Data.DataTable.datasource" />
+    <None Include="Reports\2506.pdf" />
+    <None Include="Reports\NRF Manual.pdf" />
+    <None Include="Reports\NRF-09-14-2017-124.pdf" />
+    <None Include="Reports\NRF-09-14-2017-125.pdf" />
+    <None Include="Reports\NRF.pdf" />
+    <None Include="Reports\NRF05-09-2017.pdf" />
+    <None Include="Reports\NRF05-11-2017-1.pdf" />
+    <None Include="Reports\NRF08-08-2017.pdf" />
+    <None Include="Reports\NRF09-08-2017.pdf" />
+    <None Include="Reports\NRF12-09-2017.pdf" />
+    <None Include="Reports\NRF13-09-2017.pdf" />
+    <None Include="Reports\NRF14-09-2017.pdf" />
+    <None Include="Reports\NRF15-07-2017.pdf" />
+    <None Include="Reports\NRF16-06-2017.pdf" />
+    <None Include="Reports\NRF2017-05-31112253.pdf" />
+    <None Include="Reports\NRF20170531114254.pdf" />
+    <None Include="Reports\NRF25-08-2017.pdf" />
+    <None Include="Reports\NRF26-07-2017.pdf" />
+    <None Include="Reports\NRF28-08-2017.pdf" />
+    <None Include="Reports\NRF31-05-2017.pdf" />
+    <None Include="Service References\BSS_ServiceLocal\BSS_Service.wsdl" />
+    <None Include="Service References\BSS_Service\BSS_Service1.wsdl" />
+    <None Include="Service References\BSS_Service\configuration91.svcinfo" />
+    <None Include="Service References\BSS_Service\configuration.svcinfo" />
+    <None Include="Service References\BSS_Service\Reference.svcmap">
+      <Generator>WCF Proxy Generator</Generator>
+      <LastGenOutput>Reference.cs</LastGenOutput>
+    </None>
+    <None Include="Service References\BSS_Service\BSS_Service1.disco" />
+    <None Include="Service References\BSS_ServiceLocal\BSS_Service.disco" />
+    <None Include="Service References\BSS_ServiceLocal\configuration91.svcinfo" />
+    <None Include="Service References\BSS_ServiceLocal\configuration.svcinfo" />
+    <None Include="Service References\BSS_ServiceLocal\Reference.svcmap">
+      <Generator>WCF Proxy Generator</Generator>
+      <LastGenOutput>Reference.cs</LastGenOutput>
+    </None>
+    <Content Include="SMS\Department.aspx" />
+    <Content Include="SMS\SingleSMS.aspx" />
+    <Content Include="Styles\css\bootstrap-rtl.css" />
+    <Content Include="Styles\css\bootstrap-rtl.min.css" />
+    <Content Include="Styles\css\bootstrap.css" />
+    <Content Include="Styles\css\bootstrap.min.css" />
+    <Content Include="Styles\css\plugins\morris.css" />
+    <Content Include="Styles\css\sb-admin-rtl.css" />
+    <Content Include="Styles\css\sb-admin.css" />
+    <Content Include="Images\download.png" />
+    <Content Include="Styles\font-awesome\css\font-awesome.css" />
+    <Content Include="Styles\font-awesome\css\font-awesome.min.css" />
+    <Content Include="Styles\font-awesome\fonts\fontawesome-webfont.svg" />
+    <Content Include="Styles\fonts\glyphicons-halflings-regular.svg" />
+    <Content Include="Styles\Site.css" />
+    <Content Include="TestExportExcel.aspx" />
+    <Content Include="TestPortPanel.aspx" />
+    <Content Include="TestTaimur\addcity.aspx" />
+    <Content Include="TestTaimur\addnewcity.aspx" />
+    <Content Include="UserControls\cntBrowsingDeadIssue.ascx" />
+    <Content Include="UserControls\cntemailIsuee.ascx" />
+    <Content Include="UserControls\cntIntial_linkDownDrops.ascx" />
+    <Content Include="UserControls\cntServiceRequest.ascx" />
+    <Content Include="UserControls\cntWebIssue.ascx" />
+    <Content Include="UserControls\pnl_Misc.ascx" />
+    <Content Include="UserControls\pnl_TDM.ascx" />
+    <Content Include="UserControls\SearchForm.ascx" />
+    <Content Include="ViewFiberDetails.aspx" />
+    <Content Include="Web.config">
+      <SubType>Designer</SubType>
+    </Content>
+    <Content Include="Web.Debug.config">
+      <DependentUpon>Web.config</DependentUpon>
+    </Content>
+    <Content Include="Web.Release.config">
+      <DependentUpon>Web.config</DependentUpon>
+    </Content>
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="BSS Administration\CreateAccount.aspx.cs">
+      <DependentUpon>CreateAccount.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="BSS Administration\CreateAccount.aspx.designer.cs">
+      <DependentUpon>CreateAccount.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Classes\BL.cs" />
+    <Compile Include="Classes\clsCreateAccount.cs" />
+    <Compile Include="Classes\clsCreateContact.cs" />
+    <Compile Include="Classes\clsCreatePartner.cs" />
+    <Compile Include="Classes\clsDBAccess.cs" />
+    <Compile Include="Classes\clsGeneralFunction.cs" />
+    <Compile Include="Classes\clsInfraCosting.cs" />
+    <Compile Include="Classes\clsMap.cs" />
+    <Compile Include="BSS\CustomerOrder.aspx.cs">
+      <DependentUpon>CustomerOrder.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="BSS\CustomerOrder.aspx.designer.cs">
+      <DependentUpon>CustomerOrder.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Classes\clsMethodCalling.cs" />
+    <Compile Include="Classes\clsNRFView.cs" />
+    <Compile Include="Classes\clsNRFWithOpportunity.cs" />
+    <Compile Include="Classes\clsOpportunity.cs" />
+    <Compile Include="Classes\clsTAF.cs" />
+    <Compile Include="Classes\Cls_Territory.cs" />
+    <Compile Include="ComplainManager.aspx.cs">
+      <DependentUpon>ComplainManager.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="ComplainManager.aspx.designer.cs">
+      <DependentUpon>ComplainManager.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Dashboard\ComplainAnalysis.aspx.cs">
+      <DependentUpon>ComplainAnalysis.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Dashboard\ComplainAnalysis.aspx.designer.cs">
+      <DependentUpon>ComplainAnalysis.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Dashboard\CustomerAnalysis.aspx.cs">
+      <DependentUpon>CustomerAnalysis.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Dashboard\CustomerAnalysis.aspx.designer.cs">
+      <DependentUpon>CustomerAnalysis.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Dashboard\SmartSearch.aspx.cs">
+      <DependentUpon>SmartSearch.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Dashboard\SmartSearch.aspx.designer.cs">
+      <DependentUpon>SmartSearch.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Default.aspx.cs">
+      <DependentUpon>Default.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Default.aspx.designer.cs">
+      <DependentUpon>Default.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="NRF\MapNRFWithOpportunity.aspx.cs">
+      <DependentUpon>MapNRFWithOpportunity.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="NRF\MapNRFWithOpportunity.aspx.designer.cs">
+      <DependentUpon>MapNRFWithOpportunity.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="NRF\NRFWithOpportunity.aspx.cs">
+      <DependentUpon>NRFWithOpportunity.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="NRF\NRFWithOpportunity.aspx.designer.cs">
+      <DependentUpon>NRFWithOpportunity.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="NRF\TAFApproval.aspx.cs">
+      <DependentUpon>TAFApproval.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="NRF\TAFApproval.aspx.designer.cs">
+      <DependentUpon>TAFApproval.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="NRF\TAFCreation.aspx.cs">
+      <DependentUpon>TAFCreation.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="NRF\TAFCreation.aspx.designer.cs">
+      <DependentUpon>TAFCreation.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="NRF\TAFSearch.aspx.cs">
+      <DependentUpon>TAFSearch.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="NRF\TAFSearch.aspx.designer.cs">
+      <DependentUpon>TAFSearch.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="NRF\TAFSearchData.aspx.cs">
+      <DependentUpon>TAFSearchData.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="NRF\TAFSearchData.aspx.designer.cs">
+      <DependentUpon>TAFSearchData.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="NRF\TestingISL.aspx.cs">
+      <DependentUpon>TestingISL.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="NRF\TestingISL.aspx.designer.cs">
+      <DependentUpon>TestingISL.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="NRF\TestingPageCurrentLocation.aspx.cs">
+      <DependentUpon>TestingPageCurrentLocation.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="NRF\TestingPageCurrentLocation.aspx.designer.cs">
+      <DependentUpon>TestingPageCurrentLocation.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Sales\CreateCustContact.aspx.cs">
+      <DependentUpon>CreateCustContact.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Sales\CreateCustContact.aspx.designer.cs">
+      <DependentUpon>CreateCustContact.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Sales\CreateOpportunityEBU.aspx.cs">
+      <DependentUpon>CreateOpportunityEBU.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Sales\CreateOpportunityEBU.aspx.designer.cs">
+      <DependentUpon>CreateOpportunityEBU.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="frmLogin.aspx.cs">
+      <DependentUpon>frmLogin.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="frmLogin.aspx.designer.cs">
+      <DependentUpon>frmLogin.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="IBU\CreateOpportunityIBU.aspx.cs">
+      <DependentUpon>CreateOpportunityIBU.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="IBU\CreateOpportunityIBU.aspx.designer.cs">
+      <DependentUpon>CreateOpportunityIBU.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="IBU\OpportunityList.aspx.cs">
+      <DependentUpon>OpportunityList.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="IBU\OpportunityList.aspx.designer.cs">
+      <DependentUpon>OpportunityList.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="IBU\UpdateOpportunityIBU.aspx.cs">
+      <DependentUpon>UpdateOpportunityIBU.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="IBU\UpdateOpportunityIBU.aspx.designer.cs">
+      <DependentUpon>UpdateOpportunityIBU.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="NRF\InfraCosting.aspx.cs">
+      <DependentUpon>InfraCosting.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="NRF\InfraCosting.aspx.designer.cs">
+      <DependentUpon>InfraCosting.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="NRF\LoadControlData.asmx.cs">
+      <DependentUpon>LoadControlData.asmx</DependentUpon>
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="NRF\Lookup.aspx.cs">
+      <DependentUpon>Lookup.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="NRF\Lookup.aspx.designer.cs">
+      <DependentUpon>Lookup.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="NRF\Manual.aspx.cs">
+      <DependentUpon>Manual.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="NRF\Manual.aspx.designer.cs">
+      <DependentUpon>Manual.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="NRF\MapNRFCustomerCoordinates.aspx.cs">
+      <DependentUpon>MapNRFCustomerCoordinates.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="NRF\MapNRFCustomerCoordinates.aspx.designer.cs">
+      <DependentUpon>MapNRFCustomerCoordinates.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="NRF\NRFDetailView.aspx.cs">
+      <DependentUpon>NRFDetailView.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="NRF\NRFDetailView.aspx.designer.cs">
+      <DependentUpon>NRFDetailView.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="NRF\NRFItemsView.aspx.cs">
+      <DependentUpon>NRFItemsView.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="NRF\NRFItemsView.aspx.designer.cs">
+      <DependentUpon>NRFItemsView.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="OMTeamEscalation.aspx.cs">
+      <DependentUpon>OMTeamEscalation.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="OMTeamEscalation.aspx.designer.cs">
+      <DependentUpon>OMTeamEscalation.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Reports\NRF1.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>NRF.rpt</DependentUpon>
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="Sales\Activity.aspx.cs">
+      <DependentUpon>Activity.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Sales\Activity.aspx.designer.cs">
+      <DependentUpon>Activity.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Sales\CreateUser.aspx.cs">
+      <DependentUpon>CreateUser.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Sales\CreateUser.aspx.designer.cs">
+      <DependentUpon>CreateUser.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Sales\OpportunityListEBU.aspx.cs">
+      <DependentUpon>OpportunityListEBU.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Sales\OpportunityListEBU.aspx.designer.cs">
+      <DependentUpon>OpportunityListEBU.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Sales\Quota.aspx.cs">
+      <DependentUpon>Quota.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Sales\Quota.aspx.designer.cs">
+      <DependentUpon>Quota.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Sales\UpdateOpportunityEBU.aspx.cs">
+      <DependentUpon>UpdateOpportunityEBU.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Sales\UpdateOpportunityEBU.aspx.designer.cs">
+      <DependentUpon>UpdateOpportunityEBU.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="SearchCircuits.aspx.cs">
+      <DependentUpon>SearchCircuits.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="SearchCircuits.aspx.designer.cs">
+      <DependentUpon>SearchCircuits.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="NRF\MapCoordinates.aspx.cs">
+      <DependentUpon>MapCoordinates.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="NRF\MapCoordinates.aspx.designer.cs">
+      <DependentUpon>MapCoordinates.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="NRF\MapNRF.aspx.cs">
+      <DependentUpon>MapNRF.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="NRF\MapNRF.aspx.designer.cs">
+      <DependentUpon>MapNRF.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="NRF\NRFView.aspx.cs">
+      <DependentUpon>NRFView.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="NRF\NRFView.aspx.designer.cs">
+      <DependentUpon>NRFView.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="Service References\BSS_ServiceLocal\Reference.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </Compile>
+    <Compile Include="Service References\BSS_Service\Reference.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </Compile>
+    <Compile Include="Site.Master.cs">
+      <DependentUpon>Site.Master</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Site.Master.designer.cs">
+      <DependentUpon>Site.Master</DependentUpon>
+    </Compile>
+    <Compile Include="SMS\Department.aspx.cs">
+      <DependentUpon>Department.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="SMS\Department.aspx.designer.cs">
+      <DependentUpon>Department.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="SMS\SingleSMS.aspx.cs">
+      <DependentUpon>SingleSMS.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="SMS\SingleSMS.aspx.designer.cs">
+      <DependentUpon>SingleSMS.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="TestExportExcel.aspx.cs">
+      <DependentUpon>TestExportExcel.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="TestExportExcel.aspx.designer.cs">
+      <DependentUpon>TestExportExcel.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="TestPortPanel.aspx.cs">
+      <DependentUpon>TestPortPanel.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="TestPortPanel.aspx.designer.cs">
+      <DependentUpon>TestPortPanel.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="TestTaimur\addcity.aspx.cs">
+      <DependentUpon>addcity.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="TestTaimur\addcity.aspx.designer.cs">
+      <DependentUpon>addcity.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="TestTaimur\addnewcity.aspx.cs">
+      <DependentUpon>addnewcity.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="TestTaimur\addnewcity.aspx.designer.cs">
+      <DependentUpon>addnewcity.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="UserControls\cntBrowsingDeadIssue.ascx.cs">
+      <DependentUpon>cntBrowsingDeadIssue.ascx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="UserControls\cntBrowsingDeadIssue.ascx.designer.cs">
+      <DependentUpon>cntBrowsingDeadIssue.ascx</DependentUpon>
+    </Compile>
+    <Compile Include="UserControls\cntemailIsuee.ascx.cs">
+      <DependentUpon>cntemailIsuee.ascx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="UserControls\cntemailIsuee.ascx.designer.cs">
+      <DependentUpon>cntemailIsuee.ascx</DependentUpon>
+    </Compile>
+    <Compile Include="UserControls\cntIntial_linkDownDrops.ascx.cs">
+      <DependentUpon>cntIntial_linkDownDrops.ascx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="UserControls\cntIntial_linkDownDrops.ascx.designer.cs">
+      <DependentUpon>cntIntial_linkDownDrops.ascx</DependentUpon>
+    </Compile>
+    <Compile Include="UserControls\cntServiceRequest.ascx.cs">
+      <DependentUpon>cntServiceRequest.ascx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="UserControls\cntServiceRequest.ascx.designer.cs">
+      <DependentUpon>cntServiceRequest.ascx</DependentUpon>
+    </Compile>
+    <Compile Include="UserControls\cntWebIssue.ascx.cs">
+      <DependentUpon>cntWebIssue.ascx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="UserControls\cntWebIssue.ascx.designer.cs">
+      <DependentUpon>cntWebIssue.ascx</DependentUpon>
+    </Compile>
+    <Compile Include="UserControls\pnl_Misc.ascx.cs">
+      <DependentUpon>pnl_Misc.ascx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="UserControls\pnl_Misc.ascx.designer.cs">
+      <DependentUpon>pnl_Misc.ascx</DependentUpon>
+    </Compile>
+    <Compile Include="UserControls\pnl_TDM.ascx.cs">
+      <DependentUpon>pnl_TDM.ascx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="UserControls\pnl_TDM.ascx.designer.cs">
+      <DependentUpon>pnl_TDM.ascx</DependentUpon>
+    </Compile>
+    <Compile Include="UserControls\SearchForm.ascx.cs">
+      <DependentUpon>SearchForm.ascx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="UserControls\SearchForm.ascx.designer.cs">
+      <DependentUpon>SearchForm.ascx</DependentUpon>
+    </Compile>
+    <Compile Include="ComplainForm.aspx.cs">
+      <DependentUpon>ComplainForm.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="ComplainForm.aspx.designer.cs">
+      <DependentUpon>ComplainForm.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="MultipleComplainForm.aspx.cs">
+      <DependentUpon>MultipleComplainForm.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="MultipleComplainForm.aspx.designer.cs">
+      <DependentUpon>MultipleComplainForm.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="ComplainMisc.aspx.cs">
+      <DependentUpon>ComplainMisc.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="ComplainMisc.aspx.designer.cs">
+      <DependentUpon>ComplainMisc.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="ViewFiberDetails.aspx.cs">
+      <DependentUpon>ViewFiberDetails.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="ViewFiberDetails.aspx.designer.cs">
+      <DependentUpon>ViewFiberDetails.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Sales\AddCustomer.aspx.cs">
+      <DependentUpon>AddCustomer.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Sales\AddCustomer.aspx.designer.cs">
+      <DependentUpon>AddCustomer.aspx</DependentUpon>
+    </Compile>
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="Site.Master" />
+    <None Include="Styles\font-awesome\fonts\fontawesome-webfont.eot" />
+    <None Include="Styles\font-awesome\fonts\fontawesome-webfont.ttf" />
+    <None Include="Styles\font-awesome\fonts\fontawesome-webfont.woff" />
+    <None Include="Styles\font-awesome\fonts\FontAwesome.otf" />
+    <None Include="Styles\font-awesome\less\bordered-pulled.less" />
+    <None Include="Styles\font-awesome\less\core.less" />
+    <None Include="Styles\font-awesome\less\fixed-width.less" />
+    <None Include="Styles\font-awesome\less\font-awesome.less" />
+    <None Include="Styles\font-awesome\less\icons.less" />
+    <None Include="Styles\font-awesome\less\larger.less" />
+    <None Include="Styles\font-awesome\less\list.less" />
+    <None Include="Styles\font-awesome\less\mixins.less" />
+    <None Include="Styles\font-awesome\less\path.less" />
+    <None Include="Styles\font-awesome\less\rotated-flipped.less" />
+    <None Include="Styles\font-awesome\less\spinning.less" />
+    <None Include="Styles\font-awesome\less\stacked.less" />
+    <None Include="Styles\font-awesome\less\variables.less" />
+    <None Include="Styles\font-awesome\scss\font-awesome.scss" />
+    <None Include="Styles\font-awesome\scss\_bordered-pulled.scss" />
+    <None Include="Styles\font-awesome\scss\_core.scss" />
+    <None Include="Styles\font-awesome\scss\_fixed-width.scss" />
+    <None Include="Styles\font-awesome\scss\_icons.scss" />
+    <None Include="Styles\font-awesome\scss\_larger.scss" />
+    <None Include="Styles\font-awesome\scss\_list.scss" />
+    <None Include="Styles\font-awesome\scss\_mixins.scss" />
+    <None Include="Styles\font-awesome\scss\_path.scss" />
+    <None Include="Styles\font-awesome\scss\_rotated-flipped.scss" />
+    <None Include="Styles\font-awesome\scss\_spinning.scss" />
+    <None Include="Styles\font-awesome\scss\_stacked.scss" />
+    <None Include="Styles\font-awesome\scss\_variables.scss" />
+    <None Include="Styles\fonts\glyphicons-halflings-regular.eot" />
+    <None Include="Styles\fonts\glyphicons-halflings-regular.ttf" />
+    <None Include="Styles\fonts\glyphicons-halflings-regular.woff" />
+    <None Include="Styles\fonts\glyphicons-halflings-regular.woff2" />
+  </ItemGroup>
+  <ItemGroup>
+    <WCFMetadata Include="Service References\" />
+  </ItemGroup>
+  <ItemGroup>
+    <WCFMetadataStorage Include="Service References\BSS_ServiceLocal\" />
+    <WCFMetadataStorage Include="Service References\BSS_Service\" />
+  </ItemGroup>
+  <ItemGroup>
+    <EmbeddedResource Include="Reports\NRF.rpt">
+      <Generator>CrystalDecisions.VSDesigner.CodeGen.ReportCodeGenerator</Generator>
+      <LastGenOutput>NRF1.cs</LastGenOutput>
+    </EmbeddedResource>
+  </ItemGroup>
+  <ItemGroup>
+    <Service Include="{C0C07587-41A7-46C8-8FBD-3F9C8EBE2DDC}" />
+  </ItemGroup>
+  <ItemGroup>
+    <Folder Include="Folder\" />
+  </ItemGroup>
+  <Import Project="$(MSBuildBinPath)\Microsoft.CSharp.targets" />
+  <Import Project="$(MSBuildExtensionsPath32)\Microsoft\VisualStudio\v10.0\WebApplications\Microsoft.WebApplication.targets" />
+  <ProjectExtensions>
+    <VisualStudio>
+      <FlavorProperties GUID="{349c5851-65df-11da-9384-00065b846f21}">
+        <WebProjectProperties>
+          <UseIIS>False</UseIIS>
+          <AutoAssignPort>True</AutoAssignPort>
+          <DevelopmentServerPort>6625</DevelopmentServerPort>
+          <DevelopmentServerVPath>/</DevelopmentServerVPath>
+          <IISUrl>
+          </IISUrl>
+          <NTLMAuthentication>False</NTLMAuthentication>
+          <UseCustomServer>False</UseCustomServer>
+          <CustomServerUrl>
+          </CustomServerUrl>
+          <SaveServerSettingsInUserFile>False</SaveServerSettingsInUserFile>
+        </WebProjectProperties>
+      </FlavorProperties>
+    </VisualStudio>
+  </ProjectExtensions>
+  <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
+       Other similar extension points exist, see Microsoft.Common.targets.
+  <Target Name="BeforeBuild">
+  </Target>
+  <Target Name="AfterBuild">
+  </Target>
+  -->
+</Project>
